@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma scène Three.js</title>
+    <style>
+          body{
+            background-color: rgb(207, 152, 207);
+          }
+          html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* ✅ empêche les scrollbars */
+            width: 100%;
+            height: 100%;
+          }
+          
+          canvas {
+            display: block; 
+            width: 100vw;   
+            height: 100vh;
+          }
+        </style>
+  </head>
+  <body>
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
