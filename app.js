@@ -47,7 +47,7 @@ new GLTFLoader().load(
       if (child.isMesh) {
         child.material.userData.outlineParameters = {
           thickness: 0.01,
-          color: new THREE.Color(0x7577BD).toArray(),
+          color: new THREE.Color(0xffffff).toArray(),
           alpha: 1,
           visible: true
         };
@@ -88,7 +88,7 @@ function animate() {
 
 
       if (jumpVelocity < 0) {
-        const targetSpeed = baseRotationSpeed + 0.01;
+        const targetSpeed = baseRotationSpeed + 0.1;
         rotationSpeed += (targetSpeed - rotationSpeed) * 0.05;
       }
 
@@ -96,7 +96,7 @@ function animate() {
       if (model.position.y <= groundY) {
         model.position.y = groundY;
         if (Math.abs(jumpVelocity) > 0.01) {
-          jumpVelocity = -jumpVelocity * 0.4; 
+          jumpVelocity = -jumpVelocity * 0.9; 
         } else {
           jumpVelocity = 0;
           isJumping = false;
@@ -117,4 +117,3 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
- 
